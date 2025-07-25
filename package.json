@@ -1,0 +1,15 @@
+{
+  "name": "greenapple",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "commit.js",
+  "scripts": {
+    "start": "node commit.js"
+  },
+  "dependencies": {
+    "jsonfile": "^6.1.0",
+    "moment": "^2.29.4",
+    "random": "^3.0.6",
+    "simple-git": "^3.19.1"
+  }
+}
