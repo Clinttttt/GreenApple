@@ -32,4 +32,4 @@ const makeCommits = async (n) => {
   });
 };
 
-makeCommits(30); // 30 commits
+makeCommits(60); // 30 commits
