@@ -6,10 +6,10 @@ import random from "random";
 const path = "./data.json";
 const git = simpleGit();
 
-// Function to get a random date between June 1 and July 31 of 2025
-function getRandomDateBetweenJuneAndJuly() {
+// Function to get a random date between June 1 and October 2 of 2025
+function getRandomDateBetweenJuneAndOctober() {
   const start = moment("2025-06-01");
-  const end = moment("2025-07-31");
+  const end = moment("2025-10-02");
   const diff = end.diff(start, "days");
   const randomDays = random.int(0, diff);
   return start.add(randomDays, "days").format("YYYY-MM-DD HH:mm:ss");
@@ -21,7 +21,7 @@ const makeCommits = async (n) => {
     return;
   }
 
-  const date = getRandomDateBetweenJuneAndJuly();
+  const date = getRandomDateBetweenJuneAndOctober();
   const data = { date };
 
   console.log("Commit on:", date);
@@ -32,4 +32,4 @@ const makeCommits = async (n) => {
   });
 };
 
-makeCommits(40); // You can change 50 to more or less
+makeCommits(30); // 30 commits
